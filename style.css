@@ -1,0 +1,168 @@
+/* Warm, editorial single-page layout */
+
+:root {
+  --paper: #faf6ee;
+  --ink: #2a2420;
+  --muted: #5c524a;
+  --accent: #8b2e1f;
+  --rule: #d9cfc0;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  -webkit-text-size-adjust: 100%;
+}
+
+.masthead,
+main,
+footer {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Masthead */
+
+.masthead {
+  padding-top: 3.5rem;
+  text-align: center;
+}
+
+.masthead h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 9vw, 3.75rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.course {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+nav {
+  margin-top: 2rem;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 1.75rem;
+  margin: 0;
+  padding: 0.6rem 0;
+  list-style: none;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.35rem 0.25rem;
+  color: var(--ink);
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* Sections */
+
+main {
+  padding-top: 1rem;
+}
+
+section {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  scroll-margin-top: 1rem;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 400;
+  font-variant: small-caps;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+}
+
+p {
+  margin: 0 0 1.1rem;
+}
+
+section p:last-child {
+  margin-bottom: 0;
+}
+
+.interests {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.interests li {
+  padding: 0.4rem 0;
+  border-bottom: 1px dotted var(--rule);
+}
+
+.interests li:last-child {
+  border-bottom: none;
+}
+
+/* Footer */
+
+footer {
+  padding-bottom: 3rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-style: italic;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--ink);
+}
+
+/* Accessibility */
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
