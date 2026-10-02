@@ -124,18 +124,21 @@ section p:last-child {
 }
 
 .interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .interests li {
-  padding: 0.4rem 0;
-  border-bottom: 1px dotted var(--rule);
-}
-
-.interests li:last-child {
-  border-bottom: none;
+  padding: 0.25rem 0.9rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: #f3ece0;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 /* Footer */
